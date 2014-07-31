@@ -3,7 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ca.loobo</groupId>
 	<artifactId>restbot</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
+
+	<name>restbot</name>
+	<description>Restful API Test Tool</description>
+	<url>http://restbot.loobo.ca</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 	<build>
 		<plugins>
@@ -28,6 +40,46 @@
 							<mainClass>com.quickplay.restbot.Main</mainClass>
 						</manifest>
 					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<passphrase>loobocanada</passphrase>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -148,10 +200,10 @@
 			<version>2.2.5</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.skyscreamer</groupId>
-		    <artifactId>jsonassert</artifactId>
-		    <version>1.2.3</version>
-		</dependency>		
+			<groupId>org.skyscreamer</groupId>
+			<artifactId>jsonassert</artifactId>
+			<version>1.2.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
@@ -163,7 +215,7 @@
 			<artifactId>cglib</artifactId>
 			<version>3.1</version>
 		</dependency>
-				
+
 	</dependencies>
 	<scm>
 		<url>https://github.com/loobo/restbot</url>
@@ -172,7 +224,6 @@
 		<name>Loobo Inc.</name>
 		<url>www.loobo.ca</url>
 	</organization>
-	<name>Restful API Test Tool</name>
 	<developers>
 		<developer>
 			<name>Lubo</name>

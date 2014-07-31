@@ -38,11 +38,4 @@ public class JsonPathTest {
 		assertTrue(ac.getErrors().size()==0);
 	}
 	
-	@Test
-	public void test2() throws IOException {
-		File jsonFile = new File("output/response_case_titles_1.json");
-		Object value = JsonPath.read(jsonFile, "$..cast");
-
-		System.err.println(new Gson().toJson(value));
-	}
 }

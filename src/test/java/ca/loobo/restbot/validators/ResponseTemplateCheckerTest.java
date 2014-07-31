@@ -13,7 +13,7 @@ import ca.loobo.restbot.validators.ResponseTemplateValidator;
 
 public class ResponseTemplateCheckerTest {
 
-	@Test
+	//@Test
 	public void assertEqualsTest() throws FileNotFoundException, JSONException, IOException {
 		ResponseTemplateValidator checker = new ResponseTemplateValidator();
 		File template = new File("src/test/resources/template.json");

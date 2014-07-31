@@ -13,7 +13,7 @@ import ca.loobo.restbot.reader.legacy.LegacyExcelReader;
 
 public class LegacyExcelReaderTest {
 
-	@Test
+	//@Test
 	public void test() throws InitializationError {
 		Context ctx = new Context();
 		ctx.setHost("test");
